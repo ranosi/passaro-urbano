@@ -52,7 +52,14 @@ export class OfertasService {
         }
     ];
 
-    public getOfertas(): Array<Oferta> {
+    /* public getOfertas(): Array<Oferta> {
         return this.ofertas;
+    } */
+    
+    public getOfertas(): Promise<Oferta[]> {
+        return new Promise((resolve, reject) => {
+            resolve(this.ofertas);
+            reject({codigo_erro: 404, mensagem_erro: 'Página não encontrada'});
+        });
     }
 }
