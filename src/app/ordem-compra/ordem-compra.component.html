@@ -36,7 +36,7 @@
         </div>
         <br />
       </div>
-     
+
       <ng-template #carrinhoVazio>
         <div class="form-row d-flex justify-content-center" style="background: #FAFAFA; padding: 20px; border-bottom: solid 1px #F0F0F0">
           Seu carrinho está vazio!
@@ -86,9 +86,8 @@
       <hr />
       <button type="submit" class="btn btn-primary btn-lg">Confirmar compra</button>
     </form>
-
-    <div class="ordem-compra" *ngIf="idPedidoCompra !== undefined">
-      <app-ordem-sucesso-compra [idPedidoCompra]="idPedidoCompra"></app-ordem-sucesso-compra>
-    </div>
+  </div>
+  <div class="ordem-compra" *ngIf="idPedidoCompra !== undefined">
+    <app-ordem-sucesso-compra [idPedidoCompra]=idPedidoCompra></app-ordem-sucesso-compra>
   </div>
 </div>
